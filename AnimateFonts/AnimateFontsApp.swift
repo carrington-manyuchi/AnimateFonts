@@ -11,7 +11,7 @@ import SwiftUI
 struct AnimateFontsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AnimateFonts()
         }
     }
 }
