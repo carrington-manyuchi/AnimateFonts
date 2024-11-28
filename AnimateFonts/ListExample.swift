@@ -8,10 +8,24 @@
 import SwiftUI
 
 struct ListExample: View {
+    
+    let people: [Person] = [
+        .init(name: "Kamila", hobby: "XCode", hobbyImage: nil),
+        .init(name: "Josephine", hobby: "UIKit", hobbyImage:  "star.fill"),
+        .init(name: "Carrington", hobby: "SwiftUI", hobbyImage: "star.fill"),
+        .init(name: "Manyuchi", hobby: "Objective-C", hobbyImage: "star.fill"),
+    ]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(people) { person in
+                RowItemView(person: person)
+                    .listRowSeparator(.hidden)
+            }
+        }
     }
 }
+
+
 
 #Preview {
     ListExample()
